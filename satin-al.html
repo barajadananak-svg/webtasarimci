@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satın Al - Fiyat Hesapla | Hazır Web Site</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
+          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
+          <a href="giris.html" class="btn btn-primary btn-sm">Giriş</a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="margin-top: var(--header-height); padding: 5rem 0;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1>Satın Al - Fiyatını Hesapla</h1>
+        <p class="text-muted">Paketinizi özelleştirin ve anlık fiyat görün. WhatsApp ile hemen sipariş verin!</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+        <!-- Form -->
+        <div class="card">
+          <h3 style="margin-bottom: 2rem;">Paket Özellikleri</h3>
+          
+          <form id="purchase-form">
+            <div class="form-group">
+              <label class="form-label">Paket Seçin *</label>
+              <select id="package" name="package" class="form-select" required>
+                <option value="baslangic">Başlangıç Paketi - 2.999 ₺</option>
+                <option value="standart">Standart Paket - 3.999 ₺</option>
+                <option value="profesyonel" selected>Profesyonel Paket - 4.999 ₺</option>
+                <option value="kurumsal">Kurumsal Paket - 7.999 ₺</option>
+                <option value="eticaret">E-Ticaret Paketi - 9.999 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Domain (.com, .net, .com.tr dahil) *</label>
+              <select id="domain" name="domain" class="form-select" required>
+                <option value="yok">Domain yok, sadece site</option>
+                <option value="com" selected>Domain dahil (.com/.net)</option>
+                <option value="com-tr">Domain dahil (.com.tr)</option>
+                <option value="org">Domain dahil (.org) - +150 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Hosting Kapasitesi *</label>
+              <select id="hosting" name="hosting" class="form-select" required>
+                <option value="5gb" selected>5GB Hosting (Dahil)</option>
+                <option value="10gb">10GB Hosting - +500 ₺</option>
+                <option value="20gb">20GB Hosting - +1.000 ₺</option>
+                <option value="50gb">50GB Hosting - +2.000 ₺</option>
+                <option value="100gb">100GB Hosting - +3.500 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">İçerik Hazırlama</label>
+              <select id="content" name="content" class="form-select">
+                <option value="hazir" selected>Hazır içeriğim var</option>
+                <option value="yardim">İçerik hazırlamada yardım - +1.500 ₺</option>
+                <option value="profesyonel">Profesyonel içerik yazımı - +3.500 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Logo Tasarımı</label>
+              <select id="logo" name="logo" class="form-select">
+                <option value="var" selected>Logom var</option>
+                <option value="basit">Basit logo tasarımı - +500 ₺</option>
+                <option value="profesyonel">Profesyonel logo - +1.500 ₺</option>
+                <option value="premium">Premium logo paketi - +3.000 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SEO Optimizasyonu</label>
+              <select id="seo" name="seo" class="form-select">
+                <option value="hayir" selected>Temel SEO dahil</option>
+                <option value="temel">İleri SEO - +1.000 ₺</option>
+                <option value="ileri">Profesyonel SEO - +2.500 ₺</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SSL Sertifikası</label>
+              <select id="ssl" name="ssl" class="form-select">
+                <option value="dahil" selected>Ücretsiz SSL (Let's Encrypt)</option>
+                <option value="premium">Premium SSL - +500 ₺</option>
+              </select>
+            </div>
+
+            <hr style="margin: 2rem 0;">
+
+            <div class="form-group">
+              <label class="form-label">Adınız Soyadınız *</label>
+              <input type="text" name="name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">E-posta *</label>
+              <input type="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Telefon *</label>
+              <input type="tel" name="phone" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Ek Notlar</label>
+              <textarea name="notes" class="form-textarea" placeholder="Varsa özel isteklerinizi yazın..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
+              💬 WhatsApp ile Sipariş Ver
+            </button>
+          </form>
+        </div>
+
+        <!-- Fiyat Özeti -->
+        <div style="position: sticky; top: calc(var(--header-height) + 2rem);">
+          <div class="card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white;">
+            <h3 style="color: white; margin-bottom: 1rem;">💰 Toplam Fiyat</h3>
+            <div id="total-price"></div>
+          </div>
+
+          <div id="price-details"></div>
+
+          <div class="card mt-3">
+            <h4>✅ Pakete Dahil Olanlar:</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Mobil uyumlu tasarım</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ 1 yıl hosting</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ 1 yıl domain</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ SSL sertifikası</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ E-posta hesapları</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Teknik destek</li>
+              <li style="padding: 0.5rem 0;">✓ Ücretsiz güncellemeler</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">HazırSite</h3>
+          <p>Profesyonel hazır web siteleri ile işletmenizi dijital dünyaya taşıyın.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Hızlı Linkler</h3>
+          <a href="kategoriler.html" class="footer-link">Kategoriler</a>
+          <a href="hizmetler.html" class="footer-link">Hizmetler</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+          <a href="iletisim.html" class="footer-link">İletişim</a>
+        </div>
+        <div>
+          <h3 class="footer-title">İletişim</h3>
+          <p>📞 0 532 000 00 00</p>
+          <p>📧 info@hazirsite.com</p>
+          <p>📍 Çukurova / Adana</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HazırSite. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
