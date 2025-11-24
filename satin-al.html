@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satın Al - Fiyat Hesapla | Hazır Web Site</title>
+  <title>Satın Al - Fiyat Hesapla | ASRA WEB AJANS</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -11,18 +11,48 @@
   <header class="header">
     <div class="container">
       <nav class="navbar">
-        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <a href="index.html" class="logo">
+          <span style="color: var(--primary);">ASRA</span>
+          <span style="color: var(--secondary);">WEB AJANS</span>
+        </a>
+
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Anasayfa</a></li>
-          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
-          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+
+          <li class="nav-item">
+            <a href="kategoriler.html" class="nav-link has-dropdown">Kategoriler</a>
+            <div class="dropdown-menu">
+              <a href="kategoriler.html?kategori=nakliyat" class="dropdown-item">Nakliyat</a>
+              <a href="kategoriler.html?kategori=beyaz-esya" class="dropdown-item">Beyaz Eşya Servisi</a>
+              <a href="kategoriler.html?kategori=hukuk" class="dropdown-item">Avukat / Hukuk</a>
+              <a href="kategoriler.html?kategori=hafriyat" class="dropdown-item">Hafriyat</a>
+              <a href="kategoriler.html?kategori=temizlik" class="dropdown-item">Temizlik Şirketi</a>
+              <a href="kategoriler.html?kategori=saglik" class="dropdown-item">Hastane / Sağlık</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="hizmetler.html" class="nav-link has-dropdown">Hizmetler</a>
+            <div class="dropdown-menu">
+              <a href="hizmetler.html#seo" class="dropdown-item">SEO Hizmetleri</a>
+              <a href="hizmetler.html#ads" class="dropdown-item">Google Ads</a>
+              <a href="hizmetler.html#sosyal-medya" class="dropdown-item">Sosyal Medya</a>
+            </div>
+          </li>
+
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
         </ul>
+
         <div class="nav-actions">
+          <a href="sepet.html" class="cart-icon" style="position: relative; font-size: 1.5rem; margin-right: 1rem;">
+            🛒
+            <span class="cart-count" style="display: none;">0</span>
+          </a>
           <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
           <a href="giris.html" class="btn btn-primary btn-sm">Giriş</a>
         </div>
+
         <div class="mobile-toggle"><span></span><span></span><span></span></div>
       </nav>
     </div>
@@ -31,18 +61,18 @@
   <section class="section" style="margin-top: var(--header-height); padding: 5rem 0;">
     <div class="container">
       <div class="text-center mb-5">
-        <h1>Satın Al - Fiyatını Hesapla</h1>
-        <p class="text-muted">Paketinizi özelleştirin ve anlık fiyat görün. WhatsApp ile hemen sipariş verin!</p>
+        <h1>💳 Satın Al - Fiyatını Hesapla</h1>
+        <p class="text-muted">Paketinizi özelleştirin, anlık fiyat görün ve WhatsApp ile hemen sipariş verin!</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+      <div style="display: grid; grid-template-columns: 1fr 400px; gap: 3rem; align-items: start;">
         <!-- Form -->
         <div class="card">
-          <h3 style="margin-bottom: 2rem;">Paket Özellikleri</h3>
-          
+          <h3 style="margin-bottom: 2rem;">📦 Paket Özellikleri</h3>
+
           <form id="purchase-form">
             <div class="form-group">
-              <label class="form-label">Paket Seçin *</label>
+              <label class="form-label">Web Sitesi Paketi *</label>
               <select id="package" name="package" class="form-select" required>
                 <option value="baslangic">Başlangıç Paketi - 2.999 ₺</option>
                 <option value="standart">Standart Paket - 3.999 ₺</option>
@@ -52,18 +82,79 @@
               </select>
             </div>
 
+            <!-- Domain Seçimi -->
             <div class="form-group">
-              <label class="form-label">Domain (.com, .net, .com.tr dahil) *</label>
-              <select id="domain" name="domain" class="form-select" required>
-                <option value="yok">Domain yok, sadece site</option>
-                <option value="com" selected>Domain dahil (.com/.net)</option>
-                <option value="com-tr">Domain dahil (.com.tr)</option>
-                <option value="org">Domain dahil (.org) - +150 ₺</option>
-              </select>
+              <label class="form-label">🌐 Domain Seçeneği *</label>
+              <div class="domain-options">
+                <div class="domain-option-card selected" data-option="new">
+                  <div class="domain-option-title">
+                    🆕 Yeni Domain Al
+                  </div>
+                  <div class="domain-option-description">
+                    Size özel yeni bir domain alıyoruz
+                  </div>
+                </div>
+
+                <div class="domain-option-card" data-option="existing">
+                  <div class="domain-option-title">
+                    🔗 Kendi Domainimi Kullanacağım
+                  </div>
+                  <div class="domain-option-description">
+                    Mevcut domainime yönlendirme yapacağım
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yeni Domain Alanları -->
+            <div id="domain-fields" style="display: block;">
+              <div class="domain-search-box">
+                <h4 style="margin-bottom: 1rem;">🔍 Domain Sorgula</h4>
+                <div class="domain-search-form">
+                  <input type="text" id="domain-search" class="domain-search-input" placeholder="orneksite" />
+                  <button type="button" onclick="searchDomain()" class="btn btn-primary">Sorgula</button>
+                </div>
+                <div id="domain-result" class="domain-result"></div>
+                <div id="selected-domain"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Domain Uzantısı</label>
+                <select id="domain" name="domain" class="form-select">
+                  <option value="com" selected>.com - Dahil</option>
+                  <option value="net">.net - Dahil</option>
+                  <option value="com-tr">.com.tr - Dahil</option>
+                  <option value="org">.org - +150 ₺</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mevcut Domain Alanları -->
+            <div id="existing-domain-fields" style="display: none;">
+              <div class="form-group">
+                <label class="form-label">Domain Adınız</label>
+                <input type="text" name="existing-domain" class="form-input" placeholder="orneksite.com" />
+              </div>
+
+              <div class="card" style="background: var(--gray-50); padding: 1.5rem;">
+                <h4 style="margin-bottom: 1rem;">📋 Nameserver Bilgileri</h4>
+                <p style="margin-bottom: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+                  Domain yönetim panelinizden aşağıdaki nameserver'ları girin:
+                </p>
+                <div style="background: var(--white); padding: 1rem; border-radius: var(--radius); margin-bottom: 0.5rem; font-family: monospace;">
+                  <strong>NS1:</strong> ns1.asrawebajans.com
+                </div>
+                <div style="background: var(--white); padding: 1rem; border-radius: var(--radius); font-family: monospace;">
+                  <strong>NS2:</strong> ns2.asrawebajans.com
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--gray-500);">
+                  ℹ️ Nameserver değişikliği 24-48 saat içinde aktif olacaktır.
+                </p>
+              </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Hosting Kapasitesi *</label>
+              <label class="form-label">💾 Hosting Kapasitesi *</label>
               <select id="hosting" name="hosting" class="form-select" required>
                 <option value="5gb" selected>5GB Hosting (Dahil)</option>
                 <option value="10gb">10GB Hosting - +500 ₺</option>
@@ -74,7 +165,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">İçerik Hazırlama</label>
+              <label class="form-label">📝 İçerik Hazırlama</label>
               <select id="content" name="content" class="form-select">
                 <option value="hazir" selected>Hazır içeriğim var</option>
                 <option value="yardim">İçerik hazırlamada yardım - +1.500 ₺</option>
@@ -83,7 +174,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Logo Tasarımı</label>
+              <label class="form-label">🎨 Logo Tasarımı</label>
               <select id="logo" name="logo" class="form-select">
                 <option value="var" selected>Logom var</option>
                 <option value="basit">Basit logo tasarımı - +500 ₺</option>
@@ -93,7 +184,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">SEO Optimizasyonu</label>
+              <label class="form-label">🔍 SEO Optimizasyonu</label>
               <select id="seo" name="seo" class="form-select">
                 <option value="hayir" selected>Temel SEO dahil</option>
                 <option value="temel">İleri SEO - +1.000 ₺</option>
@@ -102,7 +193,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">SSL Sertifikası</label>
+              <label class="form-label">🔒 SSL Sertifikası</label>
               <select id="ssl" name="ssl" class="form-select">
                 <option value="dahil" selected>Ücretsiz SSL (Let's Encrypt)</option>
                 <option value="premium">Premium SSL - +500 ₺</option>
@@ -110,6 +201,8 @@
             </div>
 
             <hr style="margin: 2rem 0;">
+
+            <h4 style="margin-bottom: 1.5rem;">👤 İletişim Bilgileri</h4>
 
             <div class="form-group">
               <label class="form-label">Adınız Soyadınız *</label>
@@ -123,12 +216,12 @@
 
             <div class="form-group">
               <label class="form-label">Telefon *</label>
-              <input type="tel" name="phone" class="form-input" required>
+              <input type="tel" name="phone" class="form-input" placeholder="05XX XXX XX XX" required>
             </div>
 
             <div class="form-group">
               <label class="form-label">Ek Notlar</label>
-              <textarea name="notes" class="form-textarea" placeholder="Varsa özel isteklerinizi yazın..."></textarea>
+              <textarea name="notes" class="form-textarea" placeholder="Varsa özel isteklerinizi yazın..." rows="4"></textarea>
             </div>
 
             <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
@@ -137,26 +230,42 @@
           </form>
         </div>
 
-        <!-- Fiyat Özeti -->
-        <div style="position: sticky; top: calc(var(--header-height) + 2rem);">
-          <div class="card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white;">
-            <h3 style="color: white; margin-bottom: 1rem;">💰 Toplam Fiyat</h3>
-            <div id="total-price"></div>
+        <!-- Fiyat Özeti - Mavi Arka Plan Beyaz Yazı -->
+        <div class="price-summary-box">
+          <h3 class="price-summary-title">💰 Fiyat Özeti</h3>
+
+          <div class="price-breakdown">
+            <div id="total-price" style="text-align: center; margin-bottom: 2rem;">
+              <div style="font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1;">
+                4.999 <span style="font-size: 2rem;">₺</span>
+              </div>
+              <div style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem;">
+                (KDV Dahil: 5.999 ₺)
+              </div>
+            </div>
           </div>
 
           <div id="price-details"></div>
 
-          <div class="card mt-3">
-            <h4>✅ Pakete Dahil Olanlar:</h4>
+          <div class="price-total">
+            <h4 style="color: var(--white); margin-bottom: 1rem;">✅ Pakete Dahil:</h4>
             <ul style="list-style: none; padding: 0;">
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Mobil uyumlu tasarım</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ 1 yıl hosting</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ 1 yıl domain</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ SSL sertifikası</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ E-posta hesapları</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Teknik destek</li>
-              <li style="padding: 0.5rem 0;">✓ Ücretsiz güncellemeler</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">✓ Mobil uyumlu tasarım</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">✓ SSL sertifikası</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">✓ Temel SEO</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">✓ İletişim formu</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">✓ WhatsApp entegrasyonu</li>
+              <li style="padding: 0.5rem 0; color: rgba(255,255,255,0.9);">✓ 1 yıl hosting + domain</li>
             </ul>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.15); border-radius: var(--radius); text-align: center;">
+            <div style="font-size: 0.875rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem;">
+              📞 Hemen Ara
+            </div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--white);">
+              0505 780 55 51
+            </div>
           </div>
         </div>
       </div>
@@ -167,25 +276,42 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3 class="footer-title">HazırSite</h3>
+          <h3 class="footer-title">ASRA WEB AJANS</h3>
           <p>Profesyonel hazır web siteleri ile işletmenizi dijital dünyaya taşıyın.</p>
+          <div style="margin-top: 1.5rem;">
+            <p>📞 0505 780 55 51</p>
+            <p>📧 bilgi@asrawebajans.com</p>
+          </div>
         </div>
+
         <div>
           <h3 class="footer-title">Hızlı Linkler</h3>
           <a href="kategoriler.html" class="footer-link">Kategoriler</a>
           <a href="hizmetler.html" class="footer-link">Hizmetler</a>
           <a href="blog.html" class="footer-link">Blog</a>
           <a href="iletisim.html" class="footer-link">İletişim</a>
+          <a href="sepet.html" class="footer-link">Sepet</a>
         </div>
+
         <div>
-          <h3 class="footer-title">İletişim</h3>
-          <p>📞 0 532 000 00 00</p>
-          <p>📧 info@hazirsite.com</p>
-          <p>📍 Çukurova / Adana</p>
+          <h3 class="footer-title">Kategoriler</h3>
+          <a href="kategoriler.html?cat=nakliyat" class="footer-link">Nakliyat</a>
+          <a href="kategoriler.html?cat=hukuk" class="footer-link">Hukuk</a>
+          <a href="kategoriler.html?cat=beyaz-esya" class="footer-link">Beyaz Eşya</a>
+          <a href="kategoriler.html?cat=saglik" class="footer-link">Sağlık</a>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Hizmetler</h3>
+          <a href="hizmetler.html#seo" class="footer-link">SEO</a>
+          <a href="hizmetler.html#ads" class="footer-link">Google Ads</a>
+          <a href="hizmetler.html#sosyal-medya" class="footer-link">Sosyal Medya</a>
+          <a href="satin-al.html" class="footer-link">Satın Al</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2024 HazırSite. Tüm hakları saklıdır.</p>
+        <p>&copy; 2024 ASRA WEB AJANS. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
