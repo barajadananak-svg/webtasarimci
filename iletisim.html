@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | Hazır Web Site</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
+          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
+          <a href="giris.html" class="btn btn-primary btn-sm">Giriş</a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="margin-top: var(--header-height);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1>İletişim</h1>
+        <p class="text-muted">Bizimle iletişime geçin, size yardımcı olalım</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+        <div class="card">
+          <h3>Mesaj Gönderin</h3>
+          <form>
+            <div class="form-group">
+              <label class="form-label">Ad Soyad</label>
+              <input type="text" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-posta</label>
+              <input type="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Telefon</label>
+              <input type="tel" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mesajınız</label>
+              <textarea class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="card mb-3">
+            <h3>İletişim Bilgileri</h3>
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0;">
+              <div style="font-size: 2rem;">📞</div>
+              <div>
+                <h4 style="margin: 0;">Telefon</h4>
+                <p style="margin: 0; color: var(--gray-600);">0 532 000 00 00</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0;">
+              <div style="font-size: 2rem;">📧</div>
+              <div>
+                <h4 style="margin: 0;">E-posta</h4>
+                <p style="margin: 0; color: var(--gray-600);">info@hazirsite.com</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0;">
+              <div style="font-size: 2rem;">📍</div>
+              <div>
+                <h4 style="margin: 0;">Adres</h4>
+                <p style="margin: 0; color: var(--gray-600);">Çukurova / Adana</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0;">
+              <div style="font-size: 2rem;">💬</div>
+              <div>
+                <h4 style="margin: 0;">WhatsApp</h4>
+                <a href="https://wa.me/905320000000" class="btn btn-whatsapp btn-sm mt-1">WhatsApp ile İletişim</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Çalışma Saatleri</h3>
+            <p><strong>Pazartesi - Cuma:</strong> 09:00 - 18:00</p>
+            <p><strong>Cumartesi:</strong> 10:00 - 16:00</p>
+            <p><strong>Pazar:</strong> Kapalı</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3 class="footer-title">HazırSite</h3><p>Profesyonel hazır web siteleri.</p></div>
+        <div><h3 class="footer-title">Hızlı Linkler</h3><a href="kategoriler.html" class="footer-link">Kategoriler</a><a href="hizmetler.html" class="footer-link">Hizmetler</a></div>
+        <div><h3 class="footer-title">İletişim</h3><p>📞 0 532 000 00 00</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 HazırSite.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

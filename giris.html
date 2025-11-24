@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap | Hazır Web Site</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
+          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="margin-top: var(--header-height); min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div style="max-width: 450px; margin: 0 auto;">
+        <div class="card">
+          <div class="text-center mb-4">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">👤</div>
+            <h1>Giriş Yap</h1>
+            <p class="text-muted">Hesabınıza giriş yapın</p>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label class="form-label">E-posta</label>
+              <input type="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Şifre</label>
+              <input type="password" class="form-input" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox"> Beni Hatırla
+              </label>
+              <a href="#" style="color: var(--primary); font-size: 0.9rem;">Şifremi Unuttum</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Giriş Yap</button>
+          </form>
+
+          <div class="text-center mt-4" style="padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+            <p class="text-muted">Hesabınız yok mu? <a href="uye-ol.html" style="color: var(--primary); font-weight: 600;">Üye Olun</a></p>
+            <p class="text-muted" style="margin-top: 1rem;"><a href="yonetici-giris.html" style="color: var(--gray-600); font-size: 0.875rem;">Yönetici Girişi</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3 class="footer-title">HazırSite</h3><p>Profesyonel hazır web siteleri.</p></div>
+        <div><h3 class="footer-title">Hızlı Linkler</h3><a href="kategoriler.html" class="footer-link">Kategoriler</a></div>
+        <div><h3 class="footer-title">İletişim</h3><p>📞 0 532 000 00 00</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 HazırSite.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

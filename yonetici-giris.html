@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yönetici Girişi | Hazır Web Site</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+        </ul>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="margin-top: var(--header-height); min-height: 80vh; display: flex; align-items: center; background: var(--gray-100);">
+    <div class="container">
+      <div style="max-width: 450px; margin: 0 auto;">
+        <div class="card">
+          <div class="text-center mb-4">
+            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">⚙️</div>
+            <h1>Yönetici Girişi</h1>
+            <p class="text-muted">Sistem yönetim paneline erişim</p>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label class="form-label">Yönetici Kullanıcı Adı</label>
+              <input type="text" class="form-input" autocomplete="username" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Yönetici Şifresi</label>
+              <input type="password" class="form-input" autocomplete="current-password" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">İki Faktörlü Doğrulama Kodu (Opsiyonel)</label>
+              <input type="text" class="form-input" maxlength="6" placeholder="6 haneli kod">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">🔐 Güvenli Giriş Yap</button>
+          </form>
+
+          <div class="text-center mt-4" style="padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+            <p class="text-muted"><a href="giris.html" style="color: var(--gray-600);">← Müşteri Girişine Dön</a></p>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1rem; background-color: #fee2e2; border-left: 4px solid #dc2626; border-radius: var(--radius);">
+            <p style="margin: 0; font-size: 0.9rem; color: #991b1b;">
+              <strong>🔒 Güvenlik:</strong> Bu sayfa yalnızca yetkili sistem yöneticileri içindir. Giriş denemeleri kayıt altına alınır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3 class="footer-title">HazırSite</h3><p>Profesyonel hazır web siteleri.</p></div>
+        <div><h3 class="footer-title">İletişim</h3><p>📞 0 532 000 00 00</p><p>📧 admin@hazirsite.com</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 HazırSite.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
