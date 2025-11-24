@@ -505,6 +505,273 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   console.log('🚀 Hazır Web Site Satışı - Sistem Yüklendi!');
+
+  // ========== Shopping Cart System ==========
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const updateCartCount = () => {
+    const cartCount = document.querySelector('.cart-count');
+    if (cartCount) {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = totalItems;
+      cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
+  };
+
+  window.addToCart = function(productId, productName, productPrice, productImage, productCategory) {
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        id: productId,
+        name: productName,
+        price: productPrice,
+        image: productImage,
+        category: productCategory,
+        quantity: 1
+      });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+
+    // Show notification
+    alert(`✅ ${productName} sepete eklendi!`);
+  };
+
+  window.removeFromCart = function(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    renderCartPage();
+  };
+
+  window.updateQuantity = function(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+      item.quantity += change;
+      if (item.quantity <= 0) {
+        removeFromCart(productId);
+      } else {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartPage();
+      }
+    }
+  };
+
+  const renderCartPage = () => {
+    const cartTableBody = document.getElementById('cart-items');
+    const cartSummary = document.getElementById('cart-summary');
+
+    if (!cartTableBody) return;
+
+    if (cart.length === 0) {
+      cartTableBody.innerHTML = `
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 3rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🛒</div>
+            <h3>Sepetiniz Boş</h3>
+            <p style="color: var(--gray-600); margin-bottom: 2rem;">Henüz sepetinize ürün eklemediniz.</p>
+            <a href="kategoriler.html" class="btn btn-primary">Ürünleri İncele</a>
+          </td>
+        </tr>
+      `;
+      if (cartSummary) cartSummary.style.display = 'none';
+      return;
+    }
+
+    let subtotal = 0;
+    const rows = cart.map(item => {
+      const itemTotal = item.price * item.quantity;
+      subtotal += itemTotal;
+      return `
+        <tr>
+          <td>
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+          </td>
+          <td>
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-category">${item.category}</div>
+          </td>
+          <td><strong>${formatPrice(item.price)}</strong></td>
+          <td>
+            <div class="cart-quantity">
+              <button class="cart-quantity-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+              <input type="number" value="${item.quantity}" class="cart-quantity-input" readonly>
+              <button class="cart-quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+            </div>
+          </td>
+          <td><strong>${formatPrice(itemTotal)}</strong></td>
+          <td>
+            <button class="cart-remove-btn" onclick="removeFromCart('${item.id}')">🗑️ Sil</button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    cartTableBody.innerHTML = rows;
+
+    if (cartSummary) {
+      const kdv = subtotal * 0.20;
+      const total = subtotal + kdv;
+
+      cartSummary.innerHTML = `
+        <h3 style="margin-bottom: 1.5rem;">Sipariş Özeti</h3>
+        <div class="cart-summary-row">
+          <span class="cart-summary-label">Ara Toplam:</span>
+          <span class="cart-summary-value">${formatPrice(subtotal)}</span>
+        </div>
+        <div class="cart-summary-row">
+          <span class="cart-summary-label">KDV (%20):</span>
+          <span class="cart-summary-value">${formatPrice(kdv)}</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span class="cart-summary-label">Genel Toplam:</span>
+          <span class="cart-summary-value">${formatPrice(total)}</span>
+        </div>
+        <button class="btn btn-primary btn-block mt-3" onclick="proceedToCheckout()">
+          Sipariş Tamamla
+        </button>
+      `;
+    }
+  };
+
+  window.proceedToCheckout = function() {
+    if (cart.length === 0) {
+      alert('Sepetinizde ürün bulunmuyor!');
+      return;
+    }
+
+    let message = '🛒 *YENİ SİPARİŞ*\n\n';
+    cart.forEach(item => {
+      message += `📦 ${item.name}\n`;
+      message += `   Adet: ${item.quantity}\n`;
+      message += `   Fiyat: ${formatPrice(item.price * item.quantity)}\n\n`;
+    });
+
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const kdv = subtotal * 0.20;
+    const total = subtotal + kdv;
+
+    message += `💰 Ara Toplam: ${formatPrice(subtotal)}\n`;
+    message += `📊 KDV: ${formatPrice(kdv)}\n`;
+    message += `✅ *Toplam: ${formatPrice(total)}*\n`;
+
+    const whatsappNumber = '905320000000';
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+  };
+
+  // Initialize cart on page load
+  updateCartCount();
+  if (document.getElementById('cart-items')) {
+    renderCartPage();
+  }
+
+  // ========== Domain Search API ==========
+  window.searchDomain = async function() {
+    const domainInput = document.getElementById('domain-search');
+    const resultDiv = document.getElementById('domain-result');
+
+    if (!domainInput || !resultDiv) return;
+
+    const domainName = domainInput.value.trim();
+
+    if (!domainName) {
+      alert('Lütfen bir domain adı girin!');
+      return;
+    }
+
+    // Show checking status
+    resultDiv.className = 'domain-result checking';
+    resultDiv.textContent = '🔍 Domain kontrol ediliyor...';
+
+    try {
+      // Simulate API call (Replace with real API)
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Random result for demo (Replace with real API response)
+      const isAvailable = Math.random() > 0.5;
+
+      if (isAvailable) {
+        resultDiv.className = 'domain-result available';
+        resultDiv.innerHTML = `
+          ✅ <strong>${domainName}</strong> kullanılabilir!
+          <button class="btn btn-sm btn-primary" style="margin-left: 1rem;" onclick="selectDomain('${domainName}')">
+            Bu Domain'i Seç
+          </button>
+        `;
+      } else {
+        resultDiv.className = 'domain-result unavailable';
+        resultDiv.innerHTML = `
+          ❌ <strong>${domainName}</strong> kullanılamaz.
+          <div style="margin-top: 0.5rem; font-size: 0.875rem;">
+            Alternatif: ${domainName}web.com, ${domainName}pro.com
+          </div>
+        `;
+      }
+    } catch (error) {
+      resultDiv.className = 'domain-result unavailable';
+      resultDiv.textContent = '⚠️ Bir hata oluştu. Lütfen tekrar deneyin.';
+    }
+  };
+
+  window.selectDomain = function(domainName) {
+    const domainSelect = document.getElementById('domain');
+    if (domainSelect) {
+      // Add as selected domain
+      const selectedDomainDiv = document.getElementById('selected-domain');
+      if (selectedDomainDiv) {
+        selectedDomainDiv.innerHTML = `
+          <div style="background: #d1fae5; color: #065f46; padding: 1rem; border-radius: var(--radius); margin-top: 1rem;">
+            ✅ Seçili Domain: <strong>${domainName}</strong>
+          </div>
+        `;
+      }
+      alert(`✅ ${domainName} seçildi!`);
+    }
+  };
+
+  // Domain option selection
+  const domainOptionCards = document.querySelectorAll('.domain-option-card');
+  domainOptionCards.forEach(card => {
+    card.addEventListener('click', function() {
+      domainOptionCards.forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+
+      const option = this.dataset.option;
+      const domainFields = document.getElementById('domain-fields');
+
+      if (option === 'new' && domainFields) {
+        domainFields.style.display = 'block';
+      } else if (domainFields) {
+        domainFields.style.display = 'none';
+      }
+    });
+  });
+
+  // ========== Mobile Dropdown Toggle ==========
+  const navItems = document.querySelectorAll('.nav-item.has-dropdown');
+  navItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    if (link && window.innerWidth <= 768) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = item.querySelector('.dropdown-menu');
+        if (dropdown) {
+          dropdown.style.position = 'static';
+          dropdown.style.opacity = dropdown.style.opacity === '1' ? '0' : '1';
+          dropdown.style.visibility = dropdown.style.visibility === 'visible' ? 'hidden' : 'visible';
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    }
+  });
+
 });
 
 // ========== Utility Functions ==========
