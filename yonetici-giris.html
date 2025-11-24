@@ -1,0 +1,318 @@
+<!-- yonetici-giris.html - Yönetici Giriş Sayfası -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yönetici paneline giriş yapın. Sistem yönetimi ve müşteri yönetimi.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Yönetici Girişi | Hazır Web Site Satışı</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== Header ve Navigasyon ========== -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          Hazır<span>Site</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="paketler.html" class="nav-link">Paketler</a></li>
+          <li><a href="index.html#sektorel" class="nav-link">Sektörel Siteler</a></li>
+          <li><a href="index.html#referanslar" class="nav-link">Referanslar</a></li>
+          <li><a href="sss.html" class="nav-link">SSS</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+          <li><a href="giris.html" class="btn btn-primary btn-sm">Giriş Yap</a></li>
+        </ul>
+
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== Giriş Bölümü ========== -->
+  <section class="login-section">
+    <div class="login-container">
+      <div class="login-header">
+        <div class="login-icon" style="background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%); color: var(--white); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          ⚙️
+        </div>
+        <h1>Yönetici Girişi</h1>
+        <p style="color: var(--text-light);">Sistem yönetim paneline erişim</p>
+      </div>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="admin-username" class="form-label">Yönetici Kullanıcı Adı</label>
+          <input
+            type="text"
+            id="admin-username"
+            name="username"
+            class="form-input"
+            placeholder="Yönetici kullanıcı adı"
+            required
+            autocomplete="username"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="admin-password" class="form-label">Yönetici Şifresi</label>
+          <input
+            type="password"
+            id="admin-password"
+            name="password"
+            class="form-input"
+            placeholder="Güvenli şifreniz"
+            required
+            autocomplete="current-password"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="admin-2fa" class="form-label">İki Faktörlü Doğrulama Kodu (Opsiyonel)</label>
+          <input
+            type="text"
+            id="admin-2fa"
+            name="twofa"
+            class="form-input"
+            placeholder="6 haneli kod"
+            maxlength="6"
+          >
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: center;">
+          <label style="display: flex; align-items: center; cursor: pointer;">
+            <input type="checkbox" name="remember" style="margin-right: 0.5rem;">
+            <span>Bu cihazı hatırla (30 gün)</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          🔐 Güvenli Giriş Yap
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p><a href="giris.html">← Müşteri Girişine Dön</a></p>
+      </div>
+
+      <!-- Güvenlik Uyarısı -->
+      <div style="margin-top: 2rem; padding: 1rem; background-color: #fee2e2; border-left: 4px solid #dc2626; border-radius: 6px;">
+        <p style="margin: 0; font-size: 0.9rem; color: #991b1b;">
+          <strong>🔒 Güvenlik:</strong> Bu sayfa yalnızca yetkili sistem yöneticileri içindir.
+          Giriş denemeleri kayıt altına alınır ve izlenir. Yetkisiz erişim girişimleri rapor edilecektir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Yönetici Panel Özellikleri ========== -->
+  <section class="section" style="background-color: var(--light-bg);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Yönetim Paneli Özellikleri</h2>
+        <p>Kapsamlı sistem ve müşteri yönetimi</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <h3 class="card-title">Müşteri Yönetimi</h3>
+          <p class="card-text">Tüm müşterileri görüntüle, düzenle ve yönet</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3 class="card-title">Paket Yönetimi</h3>
+          <p class="card-text">Paket fiyatları, özellikleri ve içerikleri yönet</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3 class="card-title">Mesaj Yönetimi</h3>
+          <p class="card-text">Gelen talepleri görüntüle ve yanıtla</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3 class="card-title">Raporlama</h3>
+          <p class="card-text">Satış, ziyaretçi ve performans raporları</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3 class="card-title">Site Yönetimi</h3>
+          <p class="card-text">Ana site içeriğini düzenle ve güncelle</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3 class="card-title">Sistem Ayarları</h3>
+          <p class="card-text">Genel sistem yapılandırması ve ayarlar</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔐</div>
+          <h3 class="card-title">Güvenlik</h3>
+          <p class="card-text">Kullanıcı rolleri, izinler ve güvenlik</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💾</div>
+          <h3 class="card-title">Yedekleme</h3>
+          <p class="card-text">Veritabanı ve dosya yedekleme sistemi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Sistem Gereksinimleri ========== -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem;">Sistem Gereksinimleri</h2>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Önerilen Tarayıcılar</h3>
+            <ul style="padding-left: 1.5rem; color: var(--text-color);">
+              <li>Google Chrome (En son sürüm)</li>
+              <li>Mozilla Firefox (En son sürüm)</li>
+              <li>Microsoft Edge (En son sürüm)</li>
+              <li>Safari 14+ (macOS)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Güvenlik Önerileri</h3>
+            <ul style="padding-left: 1.5rem; color: var(--text-color);">
+              <li>Güçlü şifre kullanın</li>
+              <li>2FA etkinleştirin</li>
+              <li>Paylaşılan cihazlarda oturumu kapatın</li>
+              <li>VPN kullanımı önerilir</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Destek Bilgisi -->
+        <div style="margin-top: 3rem; padding: 2rem; background-color: var(--light-bg); border-radius: 10px; text-align: center;">
+          <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Teknik Destek</h3>
+          <p style="color: var(--text-light); margin-bottom: 1.5rem;">Giriş yaparken sorun mu yaşıyorsunuz? Sistem yöneticisi ile iletişime geçin.</p>
+          <p style="margin: 0;">
+            <strong>Destek E-posta:</strong>
+            <a href="mailto:admin@hazirsiteornek.com" style="color: var(--primary-color);">admin@hazirsiteornek.com</a>
+          </p>
+          <p style="margin: 0.5rem 0 0 0;">
+            <strong>Acil Telefon:</strong>
+            <a href="tel:+905320000000" style="color: var(--primary-color);">0 532 000 00 00</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hazır Web Site Satışı</h3>
+          <p>Küçük ve orta ölçekli işletmelere profesyonel, uygun fiyatlı ve hızlı web site çözümleri sunuyoruz.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">💼</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hızlı Linkler</h3>
+          <div class="footer-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="paketler.html">Paketler</a>
+            <a href="sss.html">SSS</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="giris.html">Müşteri Girişi</a>
+            <a href="yonetici-giris.html">Yönetici Girişi</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hizmetlerimiz</h3>
+          <div class="footer-links">
+            <a href="#">Kurumsal Web Sitesi</a>
+            <a href="#">E-Ticaret Sitesi</a>
+            <a href="#">Blog & Haber Sitesi</a>
+            <a href="#">Katalog Sitesi</a>
+            <a href="#">SEO Optimizasyonu</a>
+            <a href="#">Hosting & Domain</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>İletişim</h3>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h4>Telefon</h4>
+              <p>0 532 000 00 00</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <h4>E-posta</h4>
+              <p>info@hazirsiteornek.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Adres</h4>
+              <p>Çukurova / Adana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Hazır Web Site Satışı. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Yönetici paneline özel ek güvenlik scripti -->
+  <script>
+    // Yönetici giriş formu için ek güvenlik
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('admin-username').value;
+      const password = document.getElementById('admin-password').value;
+      const twofa = document.getElementById('admin-2fa').value;
+
+      // Bu bir demo olduğu için basit bir kontrol
+      if (username && password) {
+        alert('⚠️ DEMO MOD\n\nBu bir demo sayfasıdır. Gerçek yönetim paneli erişimi için backend entegrasyonu gereklidir.\n\nGiriş bilgileri: ' + username);
+      } else {
+        alert('Lütfen kullanıcı adı ve şifrenizi girin.');
+      }
+    });
+
+    // Sayfa yüklendiğinde konsola uyarı
+    console.warn('⚠️ UYARI: Bu sayfa yönetici paneli giriş sayfasıdır. Yetkisiz erişim girişimleri kayıt altına alınır.');
+  </script>
+</body>
+</html>

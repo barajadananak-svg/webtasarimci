@@ -1,0 +1,210 @@
+<!-- giris.html - Kullanıcı Giriş Sayfası -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Müşteri paneline giriş yapın. Sitenizi yönetin, içeriklerinizi güncelleyin.">
+  <title>Müşteri Girişi | Hazır Web Site Satışı</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== Header ve Navigasyon ========== -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          Hazır<span>Site</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="paketler.html" class="nav-link">Paketler</a></li>
+          <li><a href="index.html#sektorel" class="nav-link">Sektörel Siteler</a></li>
+          <li><a href="index.html#referanslar" class="nav-link">Referanslar</a></li>
+          <li><a href="sss.html" class="nav-link">SSS</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+          <li><a href="giris.html" class="btn btn-primary btn-sm">Giriş Yap</a></li>
+        </ul>
+
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== Giriş Bölümü ========== -->
+  <section class="login-section">
+    <div class="login-container">
+      <div class="login-header">
+        <div class="login-icon">👤</div>
+        <h1>Müşteri Girişi</h1>
+        <p>Sitenizin yönetim panelinize erişmek için giriş yapın</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username" class="form-label">Kullanıcı Adı veya E-posta</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-input"
+            placeholder="Kullanıcı adınız veya e-posta adresiniz"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Şifre</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-input"
+            placeholder="Şifreniz"
+            required
+          >
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: center; justify-content: space-between;">
+          <label style="display: flex; align-items: center; cursor: pointer;">
+            <input type="checkbox" name="remember" style="margin-right: 0.5rem;">
+            <span>Beni Hatırla</span>
+          </label>
+          <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">Şifremi Unuttum?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          Giriş Yap
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p>Henüz hesabınız yok mu? <a href="iletisim.html">Bizimle iletişime geçin</a></p>
+        <p style="margin-top: 1rem;"><a href="yonetici-giris.html">Yönetici Girişi</a></p>
+      </div>
+
+      <!-- Bilgilendirme Kutusu -->
+      <div style="margin-top: 2rem; padding: 1rem; background-color: #fef3c7; border-left: 4px solid var(--secondary-color); border-radius: 6px;">
+        <p style="margin: 0; font-size: 0.9rem; color: var(--dark-color);">
+          <strong>💡 Bilgi:</strong> Giriş bilgilerinizi almak veya şifrenizi sıfırlamak için
+          <a href="iletisim.html" style="color: var(--primary-color); font-weight: 600;">destek ekibimizle iletişime geçin</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Yardım Bölümü ========== -->
+  <section class="section" style="background-color: var(--light-bg);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Giriş Yaparken Sorun mu Yaşıyorsunuz?</h2>
+        <p>Size yardımcı olmak için buradayız</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon">🔑</div>
+          <h3 class="card-title">Şifremi Unuttum</h3>
+          <p class="card-text">Şifrenizi mi unuttunuz? "Şifremi Unuttum" bağlantısını kullanarak şifrenizi sıfırlayabilirsiniz.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📧</div>
+          <h3 class="card-title">Giriş Bilgilerim Nerede?</h3>
+          <p class="card-text">Site teslimatı sırasında size e-posta ile gönderilen giriş bilgilerinizi kullanabilirsiniz.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3 class="card-title">Teknik Destek</h3>
+          <p class="card-text">Herhangi bir sorun yaşıyorsanız 7/24 teknik destek ekibimizle iletişime geçebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="iletisim.html" class="btn btn-secondary btn-lg">Destek Ekibine Ulaş</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hazır Web Site Satışı</h3>
+          <p>Küçük ve orta ölçekli işletmelere profesyonel, uygun fiyatlı ve hızlı web site çözümleri sunuyoruz.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">💼</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hızlı Linkler</h3>
+          <div class="footer-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="paketler.html">Paketler</a>
+            <a href="sss.html">SSS</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="giris.html">Müşteri Girişi</a>
+            <a href="yonetici-giris.html">Yönetici Girişi</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hizmetlerimiz</h3>
+          <div class="footer-links">
+            <a href="#">Kurumsal Web Sitesi</a>
+            <a href="#">E-Ticaret Sitesi</a>
+            <a href="#">Blog & Haber Sitesi</a>
+            <a href="#">Katalog Sitesi</a>
+            <a href="#">SEO Optimizasyonu</a>
+            <a href="#">Hosting & Domain</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>İletişim</h3>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h4>Telefon</h4>
+              <p>0 532 000 00 00</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <h4>E-posta</h4>
+              <p>info@hazirsiteornek.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Adres</h4>
+              <p>Çukurova / Adana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Hazır Web Site Satışı. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
