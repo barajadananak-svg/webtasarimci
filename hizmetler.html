@@ -3,25 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dijital Pazarlama Hizmetlerimiz | SEO & Google Ads</title>
+  <title>Dijital Pazarlama Hizmetlerimiz | ASRA WEB AJANS</title>
+  <meta name="description" content="SEO, Google Ads ve Sosyal Medya yönetimi ile işletmenizi büyütün. Profesyonel dijital pazarlama hizmetleri.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <nav class="navbar">
-        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <a href="index.html" class="logo">
+          <span style="color: var(--primary);">ASRA</span>
+          <span style="color: var(--secondary);">WEB AJANS</span>
+        </a>
+
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Anasayfa</a></li>
-          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
-          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+          <li class="nav-item">
+            <a href="kategoriler.html" class="nav-link has-dropdown">Kategoriler</a>
+            <div class="dropdown-menu">
+              <a href="kategoriler.html?kategori=nakliyat" class="dropdown-item">Nakliyat</a>
+              <a href="kategoriler.html?kategori=beyaz-esya" class="dropdown-item">Beyaz Eşya Servisi</a>
+              <a href="kategoriler.html?kategori=hukuk" class="dropdown-item">Avukat / Hukuk</a>
+              <a href="kategoriler.html?kategori=hafriyat" class="dropdown-item">Hafriyat</a>
+              <a href="kategoriler.html?kategori=temizlik" class="dropdown-item">Temizlik Şirketi</a>
+              <a href="kategoriler.html?kategori=saglik" class="dropdown-item">Hastane / Sağlık</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="hizmetler.html" class="nav-link has-dropdown">Hizmetler</a>
+            <div class="dropdown-menu">
+              <a href="seo.html" class="dropdown-item">SEO Hizmetleri</a>
+              <a href="ads.html" class="dropdown-item">Google Ads</a>
+              <a href="sosyal-medya.html" class="dropdown-item">Sosyal Medya</a>
+            </div>
+          </li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
         </ul>
+
         <div class="nav-actions">
+          <a href="sepet.html" class="cart-icon" style="position: relative; font-size: 1.5rem; margin-right: 1rem;">
+            🛒
+            <span class="cart-count" style="display: none;">0</span>
+          </a>
           <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
           <a href="giris.html" class="btn btn-primary btn-sm">Giriş</a>
         </div>
+
         <div class="mobile-toggle"><span></span><span></span><span></span></div>
       </nav>
     </div>
@@ -34,55 +63,182 @@
         <p class="text-muted">Web siteniz ile birlikte dijital pazarlama hizmetlerimizden faydalanın</p>
       </div>
 
-      <div class="grid grid-3">
-        <div class="card">
-          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🔍</div>
-          <h3 class="text-center">SEO Optimizasyonu</h3>
-          <p class="text-center text-muted">Google'da üst sıralarda yer alın</p>
-          <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-            <li style="padding: 0.5rem 0;">✓ Anahtar kelime analizi</li>
-            <li style="padding: 0.5rem 0;">✓ On-page SEO</li>
-            <li style="padding: 0.5rem 0;">✓ Teknik SEO</li>
-            <li style="padding: 0.5rem 0;">✓ İçerik optimizasyonu</li>
-            <li style="padding: 0.5rem 0;">✓ Backlink stratejisi</li>
-          </ul>
-          <div class="text-center">
-            <div class="price-value">1.500 <span>₺/ay</span></div>
-            <a href="iletisim.html" class="btn btn-primary btn-block mt-2">Teklif Al</a>
+      <div class="page-layout-with-sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">🚀 Hizmetlerimiz</h3>
+            <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                <a href="seo.html" class="sidebar-link">SEO Hizmetleri</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="ads.html" class="sidebar-link">Google Ads</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="sosyal-medya.html" class="sidebar-link">Sosyal Medya Yönetimi</a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card">
-          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">📢</div>
-          <h3 class="text-center">Google Ads</h3>
-          <p class="text-center text-muted">Hedefli reklam kampanyaları</p>
-          <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-            <li style="padding: 0.5rem 0;">✓ Kampanya kurulumu</li>
-            <li style="padding: 0.5rem 0;">✓ Anahtar kelime araştırması</li>
-            <li style="padding: 0.5rem 0;">✓ Reklam metni yazımı</li>
-            <li style="padding: 0.5rem 0;">✓ Optimizasyon</li>
-            <li style="padding: 0.5rem 0;">✓ Aylık raporlama</li>
-          </ul>
-          <div class="text-center">
-            <div class="price-value">2.000 <span>₺/ay</span></div>
-            <a href="iletisim.html" class="btn btn-primary btn-block mt-2">Teklif Al</a>
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">💡 Neden Dijital Pazarlama?</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Daha geniş kitleye ulaşın</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Ölçülebilir sonuçlar</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Düşük maliyet</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ 7/24 pazarlama</li>
+              <li style="padding: 0.5rem 0;">✓ Hedefli reklam</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card">
-          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">📱</div>
-          <h3 class="text-center">Sosyal Medya Yönetimi</h3>
-          <p class="text-center text-muted">Profesyonel sosyal medya yönetimi</p>
-          <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-            <li style="padding: 0.5rem 0;">✓ İçerik üretimi</li>
-            <li style="padding: 0.5rem 0;">✓ Gönderi planlaması</li>
-            <li style="padding: 0.5rem 0;">✓ Grafik tasarım</li>
-            <li style="padding: 0.5rem 0;">✓ Etkileşim yönetimi</li>
-            <li style="padding: 0.5rem 0;">✓ Aylık raporlama</li>
-          </ul>
-          <div class="text-center">
-            <div class="price-value">1.000 <span>₺/ay</span></div>
-            <a href="iletisim.html" class="btn btn-primary btn-block mt-2">Teklif Al</a>
+          <div class="sidebar-widget" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white);">
+            <h3 style="color: var(--white); margin-bottom: 1rem;">🎁 Ücretsiz Danışmanlık</h3>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-bottom: 1rem;">
+              İşletmeniz için en uygun dijital pazarlama stratejisini birlikte belirleyelim.
+            </p>
+            <a href="iletisim.html" class="btn" style="background: white; color: var(--primary); width: 100%;">Hemen Başvur</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">📞 İletişim</h3>
+            <div style="margin-bottom: 1rem;">
+              <div style="font-weight: 600; margin-bottom: 0.5rem;">Telefon</div>
+              <a href="tel:05057805551" style="color: var(--primary); text-decoration: none;">0505 780 55 51</a>
+            </div>
+            <div>
+              <div style="font-weight: 600; margin-bottom: 0.5rem;">E-posta</div>
+              <a href="mailto:bilgi@asrawebajans.com" style="color: var(--primary); text-decoration: none; font-size: 0.875rem;">bilgi@asrawebajans.com</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div>
+          <div class="grid grid-3" style="margin-bottom: 3rem;">
+            <!-- SEO Card -->
+            <div class="card" style="display: flex; flex-direction: column;">
+              <div style="font-size: 4rem; text-align: center; margin-bottom: 1.5rem;">🔍</div>
+              <h3 class="text-center" style="margin-bottom: 1rem;">SEO Hizmetleri</h3>
+              <p class="text-center text-muted" style="margin-bottom: 1.5rem;">Google'da üst sıralarda yer alın, organik trafik artışı sağlayın</p>
+
+              <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1;">
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Anahtar kelime araştırması</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ On-page SEO optimizasyonu</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Teknik SEO iyileştirmeleri</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ İçerik optimizasyonu</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Link building stratejisi</li>
+                <li style="padding: 0.5rem 0;">✓ Aylık detaylı raporlama</li>
+              </ul>
+
+              <div class="text-center">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">
+                  1.500 <span style="font-size: 1rem; font-weight: normal; color: var(--gray-600);">₺/ay</span>
+                </div>
+                <a href="seo.html" class="btn btn-primary btn-block">Detaylı İncele</a>
+                <a href="iletisim.html" class="btn btn-outline btn-block mt-2">Teklif Al</a>
+              </div>
+            </div>
+
+            <!-- Google Ads Card -->
+            <div class="card" style="display: flex; flex-direction: column; border: 3px solid var(--primary); position: relative;">
+              <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;">ÖNERİLEN</span>
+              <div style="font-size: 4rem; text-align: center; margin-bottom: 1.5rem;">📊</div>
+              <h3 class="text-center" style="margin-bottom: 1rem;">Google Ads Yönetimi</h3>
+              <p class="text-center text-muted" style="margin-bottom: 1.5rem;">Hedefli reklam kampanyaları ile hızlı sonuç alın</p>
+
+              <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1;">
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Kampanya kurulumu ve yönetimi</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Anahtar kelime araştırması</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Reklam metni yazımı</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Bütçe optimizasyonu</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ A/B testing</li>
+                <li style="padding: 0.5rem 0;">✓ Haftalık performans raporları</li>
+              </ul>
+
+              <div class="text-center">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">
+                  2.000 <span style="font-size: 1rem; font-weight: normal; color: var(--gray-600);">₺/ay</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--gray-500); margin-bottom: 1rem;">+ Reklam bütçesi</div>
+                <a href="ads.html" class="btn btn-primary btn-block">Detaylı İncele</a>
+                <a href="iletisim.html" class="btn btn-outline btn-block mt-2">Teklif Al</a>
+              </div>
+            </div>
+
+            <!-- Sosyal Medya Card -->
+            <div class="card" style="display: flex; flex-direction: column;">
+              <div style="font-size: 4rem; text-align: center; margin-bottom: 1.5rem;">📱</div>
+              <h3 class="text-center" style="margin-bottom: 1rem;">Sosyal Medya Yönetimi</h3>
+              <p class="text-center text-muted" style="margin-bottom: 1.5rem;">Profesyonel sosyal medya hesap yönetimi ve içerik üretimi</p>
+
+              <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1;">
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ İçerik üretimi ve planlaması</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Grafik tasarım</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Paylaşım yönetimi</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Etkileşim yönetimi</li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200);">✓ Reklam kampanyaları</li>
+                <li style="padding: 0.5rem 0;">✓ Aylık analiz ve raporlama</li>
+              </ul>
+
+              <div class="text-center">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">
+                  1.800 <span style="font-size: 1rem; font-weight: normal; color: var(--gray-600);">₺/ay</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--gray-500); margin-bottom: 1rem;">3 platform dahil</div>
+                <a href="sosyal-medya.html" class="btn btn-primary btn-block">Detaylı İncele</a>
+                <a href="iletisim.html" class="btn btn-outline btn-block mt-2">Teklif Al</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo Paketler -->
+          <div class="card" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: var(--white); margin-bottom: 3rem;">
+            <div style="text-align: center; padding: 2rem;">
+              <h2 style="color: var(--white); margin-bottom: 1rem;">🎁 Combo Paketler</h2>
+              <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1.125rem;">
+                Birden fazla hizmet alarak tasarruf edin!
+              </p>
+
+              <div class="grid grid-3" style="gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                  <h3 style="color: var(--white); margin-bottom: 1rem;">SEO + Google Ads</h3>
+                  <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">3.000 ₺<span style="font-size: 1rem; font-weight: normal;">/ay</span></div>
+                  <div style="font-size: 0.875rem; margin-bottom: 1rem; text-decoration: line-through; opacity: 0.7;">Normal: 3.500 ₺</div>
+                  <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">500 ₺ tasarruf edin!</p>
+                  <a href="iletisim.html" class="btn" style="background: white; color: var(--secondary); width: 100%;">Hemen Başla</a>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: var(--radius-xl); backdrop-filter: blur(10px); border: 2px solid white;">
+                  <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; color: var(--secondary); padding: 0.25rem 1rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;">EN POPÜLER</div>
+                  <h3 style="color: var(--white); margin-bottom: 1rem; margin-top: 0.5rem;">Full Paket</h3>
+                  <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">4.500 ₺<span style="font-size: 1rem; font-weight: normal;">/ay</span></div>
+                  <div style="font-size: 0.875rem; margin-bottom: 1rem; text-decoration: line-through; opacity: 0.7;">Normal: 5.300 ₺</div>
+                  <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">800 ₺ tasarruf edin!</p>
+                  <a href="iletisim.html" class="btn btn-primary" style="width: 100%;">Hemen Başla</a>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                  <h3 style="color: var(--white); margin-bottom: 1rem;">SEO + Sosyal Medya</h3>
+                  <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">2.800 ₺<span style="font-size: 1rem; font-weight: normal;">/ay</span></div>
+                  <div style="font-size: 0.875rem; margin-bottom: 1rem; text-decoration: line-through; opacity: 0.7;">Normal: 3.300 ₺</div>
+                  <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">500 ₺ tasarruf edin!</p>
+                  <a href="iletisim.html" class="btn" style="background: white; color: var(--secondary); width: 100%;">Hemen Başla</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="card" style="text-align: center; padding: 3rem;">
+            <h2 style="margin-bottom: 1rem;">İşletmenizi Dijital Dünyada Büyütün</h2>
+            <p style="color: var(--gray-600); margin-bottom: 2rem; font-size: 1.125rem;">
+              Ücretsiz dijital pazarlama analizi için bizimle iletişime geçin
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="iletisim.html" class="btn btn-primary btn-lg">📝 Ücretsiz Analiz Al</a>
+              <a href="tel:05057805551" class="btn btn-whatsapp btn-lg">📞 0505 780 55 51</a>
+            </div>
           </div>
         </div>
       </div>
@@ -92,13 +248,47 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><h3 class="footer-title">HazırSite</h3><p>Profesyonel hazır web siteleri.</p></div>
-        <div><h3 class="footer-title">Hızlı Linkler</h3><a href="kategoriler.html" class="footer-link">Kategoriler</a><a href="hizmetler.html" class="footer-link">Hizmetler</a></div>
-        <div><h3 class="footer-title">İletişim</h3><p>📞 0 532 000 00 00</p></div>
+        <div>
+          <h3 class="footer-title">ASRA WEB AJANS</h3>
+          <p>Profesyonel hazır web siteleri ile işletmenizi dijital dünyaya taşıyın.</p>
+          <div style="margin-top: 1.5rem;">
+            <p>📞 0505 780 55 51</p>
+            <p>📧 bilgi@asrawebajans.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Hızlı Linkler</h3>
+          <a href="kategoriler.html" class="footer-link">Kategoriler</a>
+          <a href="hizmetler.html" class="footer-link">Hizmetler</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+          <a href="iletisim.html" class="footer-link">İletişim</a>
+          <a href="sepet.html" class="footer-link">Sepet</a>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Kategoriler</h3>
+          <a href="kategoriler.html?cat=nakliyat" class="footer-link">Nakliyat</a>
+          <a href="kategoriler.html?cat=hukuk" class="footer-link">Hukuk</a>
+          <a href="kategoriler.html?cat=beyaz-esya" class="footer-link">Beyaz Eşya</a>
+          <a href="kategoriler.html?cat=saglik" class="footer-link">Sağlık</a>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Hizmetler</h3>
+          <a href="seo.html" class="footer-link">SEO</a>
+          <a href="ads.html" class="footer-link">Google Ads</a>
+          <a href="sosyal-medya.html" class="footer-link">Sosyal Medya</a>
+          <a href="satin-al.html" class="footer-link">Satın Al</a>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2024 HazırSite.</p></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 ASRA WEB AJANS. Tüm hakları saklıdır.</p>
+      </div>
     </div>
   </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -3,25 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Hazır Web Site</title>
+  <title>Blog | ASRA WEB AJANS</title>
+  <meta name="description" content="Web tasarım, SEO ve dijital pazarlama hakkında güncel yazılar ve ipuçları.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <nav class="navbar">
-        <a href="index.html" class="logo">Hazır<span>Site</span></a>
+        <a href="index.html" class="logo">
+          <span style="color: var(--primary);">ASRA</span>
+          <span style="color: var(--secondary);">WEB AJANS</span>
+        </a>
+
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Anasayfa</a></li>
-          <li><a href="kategoriler.html" class="nav-link">Kategoriler</a></li>
-          <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+          <li class="nav-item">
+            <a href="kategoriler.html" class="nav-link has-dropdown">Kategoriler</a>
+            <div class="dropdown-menu">
+              <a href="kategoriler.html?kategori=nakliyat" class="dropdown-item">Nakliyat</a>
+              <a href="kategoriler.html?kategori=beyaz-esya" class="dropdown-item">Beyaz Eşya Servisi</a>
+              <a href="kategoriler.html?kategori=hukuk" class="dropdown-item">Avukat / Hukuk</a>
+              <a href="kategoriler.html?kategori=hafriyat" class="dropdown-item">Hafriyat</a>
+              <a href="kategoriler.html?kategori=temizlik" class="dropdown-item">Temizlik Şirketi</a>
+              <a href="kategoriler.html?kategori=saglik" class="dropdown-item">Hastane / Sağlık</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="hizmetler.html" class="nav-link has-dropdown">Hizmetler</a>
+            <div class="dropdown-menu">
+              <a href="seo.html" class="dropdown-item">SEO Hizmetleri</a>
+              <a href="ads.html" class="dropdown-item">Google Ads</a>
+              <a href="sosyal-medya.html" class="dropdown-item">Sosyal Medya</a>
+            </div>
+          </li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
         </ul>
+
         <div class="nav-actions">
+          <a href="sepet.html" class="cart-icon" style="position: relative; font-size: 1.5rem; margin-right: 1rem;">
+            🛒
+            <span class="cart-count" style="display: none;">0</span>
+          </a>
           <a href="uye-ol.html" class="btn btn-outline btn-sm">Üye Ol</a>
           <a href="giris.html" class="btn btn-primary btn-sm">Giriş</a>
         </div>
+
         <div class="mobile-toggle"><span></span><span></span><span></span></div>
       </nav>
     </div>
@@ -34,37 +63,154 @@
         <p class="text-muted">Web tasarım, SEO ve dijital pazarlama hakkında güncel yazılar</p>
       </div>
 
-      <div class="product-grid">
-        <div class="card">
-          <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); border-radius: var(--radius-lg); margin-bottom: 1rem;"></div>
-          <div class="badge badge-primary mb-2">SEO</div>
-          <h3>2024 SEO Trendleri ve İpuçları</h3>
-          <p class="text-muted">Google'ın son algoritma güncellemeleri ile SEO çalışmalarınızı nasıl yapılandırmalısınız?</p>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
-            <span class="text-muted" style="font-size: 0.875rem;">24 Kasım 2024</span>
-            <a href="#" class="btn btn-primary btn-sm">Devamı →</a>
+      <div class="page-layout-with-sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">🔍 Ara</h3>
+            <input type="text" class="form-input" placeholder="Blog yazılarında ara...">
           </div>
-        </div>
 
-        <div class="card">
-          <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); border-radius: var(--radius-lg); margin-bottom: 1rem;"></div>
-          <div class="badge badge-warning mb-2">Google Ads</div>
-          <h3>Google Ads ile Satışlarınızı Artırın</h3>
-          <p class="text-muted">Etkili Google Ads kampanyaları için bilmeniz gereken her şey burada.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
-            <span class="text-muted" style="font-size: 0.875rem;">23 Kasım 2024</span>
-            <a href="#" class="btn btn-primary btn-sm">Devamı →</a>
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">📂 Kategoriler</h3>
+            <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                <a href="#" class="sidebar-link">SEO (12)</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="#" class="sidebar-link">Google Ads (8)</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="#" class="sidebar-link">Web Tasarım (15)</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="#" class="sidebar-link">Sosyal Medya (10)</a>
+              </li>
+              <li class="sidebar-list-item">
+                <a href="#" class="sidebar-link">E-Ticaret (7)</a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card">
-          <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); border-radius: var(--radius-lg); margin-bottom: 1rem;"></div>
-          <div class="badge badge-success mb-2">Web Tasarım</div>
-          <h3>Mobil Uyumlu Web Tasarımın Önemi</h3>
-          <p class="text-muted">2024'te neden her web sitesi mobil uyumlu olmalı? İşte cevabı.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
-            <span class="text-muted" style="font-size: 0.875rem;">22 Kasım 2024</span>
-            <a href="#" class="btn btn-primary btn-sm">Devamı →</a>
+          <div class="sidebar-widget">
+            <h3 class="sidebar-title">📌 Popüler Yazılar</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <a href="#" style="display: flex; gap: 1rem; text-decoration: none; color: inherit;">
+                <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=80&h=80&fit=crop" alt="Blog" style="width: 60px; height: 60px; border-radius: var(--radius); object-fit: cover;">
+                <div>
+                  <div style="font-size: 0.875rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.25rem;">SEO İpuçları 2024</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">24 Kasım 2024</div>
+                </div>
+              </a>
+              <a href="#" style="display: flex; gap: 1rem; text-decoration: none; color: inherit;">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop" alt="Blog" style="width: 60px; height: 60px; border-radius: var(--radius); object-fit: cover;">
+                <div>
+                  <div style="font-size: 0.875rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.25rem;">Web Tasarım Trendleri</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">23 Kasım 2024</div>
+                </div>
+              </a>
+              <a href="#" style="display: flex; gap: 1rem; text-decoration: none; color: inherit;">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=80&h=80&fit=crop" alt="Blog" style="width: 60px; height: 60px; border-radius: var(--radius); object-fit: cover;">
+                <div>
+                  <div style="font-size: 0.875rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.25rem;">Sosyal Medya Stratejisi</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">22 Kasım 2024</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget" style="background: var(--primary); color: var(--white);">
+            <h3 style="color: var(--white); margin-bottom: 1rem;">📞 Bize Ulaşın</h3>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-bottom: 1rem;">
+              Dijital pazarlama danışmanlığı için bizimle iletişime geçin.
+            </p>
+            <a href="iletisim.html" class="btn btn-secondary btn-block">İletişime Geç</a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div>
+          <div class="product-grid">
+            <!-- Blog Post 1 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600&h=300&fit=crop" alt="SEO Trendleri" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge badge-primary mb-2">SEO</div>
+              <h3>2024 SEO Trendleri ve İpuçları</h3>
+              <p class="text-muted">Google'ın son algoritma güncellemeleri ile SEO çalışmalarınızı nasıl yapılandırmalısınız? En güncel SEO stratejileri ve ipuçları.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 24 Kasım 2024</span>
+                <a href="blog-detay.html?id=1" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=300&fit=crop" alt="Google Ads" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge badge-warning mb-2">Google Ads</div>
+              <h3>Google Ads ile Satışlarınızı Artırın</h3>
+              <p class="text-muted">Etkili Google Ads kampanyaları için bilmeniz gereken her şey burada. ROI'nizi maksimize edin.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 23 Kasım 2024</span>
+                <a href="blog-detay.html?id=2" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=300&fit=crop" alt="Web Tasarım" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge badge-success mb-2">Web Tasarım</div>
+              <h3>Mobil Uyumlu Web Tasarımın Önemi</h3>
+              <p class="text-muted">2024'te neden her web sitesi mobil uyumlu olmalı? İşte cevabı ve uygulamalı öneriler.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 22 Kasım 2024</span>
+                <a href="blog-detay.html?id=3" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=300&fit=crop" alt="Sosyal Medya" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge" style="background: #ec4899; color: white;" class="mb-2">Sosyal Medya</div>
+              <h3>Sosyal Medya Pazarlama Stratejileri</h3>
+              <p class="text-muted">Instagram, Facebook ve LinkedIn'de başarılı olmak için bilmeniz gereken stratejiler.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 21 Kasım 2024</span>
+                <a href="blog-detay.html?id=4" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&h=300&fit=crop" alt="E-Ticaret" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge" style="background: #8b5cf6; color: white;" class="mb-2">E-Ticaret</div>
+              <h3>E-Ticaret Sitesi Açmanın 10 Adımı</h3>
+              <p class="text-muted">Başarılı bir e-ticaret sitesi açmak için bilmeniz gereken tüm detaylar adım adım.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 20 Kasım 2024</span>
+                <a href="blog-detay.html?id=5" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+
+            <!-- Blog Post 6 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="Hız Optimizasyonu" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+              <div class="badge badge-success mb-2">Web Tasarım</div>
+              <h3>Web Sitesi Hız Optimizasyonu Rehberi</h3>
+              <p class="text-muted">Web sitenizin yükleme hızını artırmak için pratik ve etkili yöntemler.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                <span class="text-muted" style="font-size: 0.875rem;">📅 19 Kasım 2024</span>
+                <a href="blog-detay.html?id=6" class="btn btn-primary btn-sm">Devamını Oku →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem;">
+            <button class="btn btn-outline btn-sm" disabled>« Önceki</button>
+            <button class="btn btn-primary btn-sm">1</button>
+            <button class="btn btn-outline btn-sm">2</button>
+            <button class="btn btn-outline btn-sm">3</button>
+            <button class="btn btn-outline btn-sm">Sonraki »</button>
           </div>
         </div>
       </div>
@@ -74,13 +220,47 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><h3 class="footer-title">HazırSite</h3><p>Profesyonel hazır web siteleri.</p></div>
-        <div><h3 class="footer-title">Hızlı Linkler</h3><a href="kategoriler.html" class="footer-link">Kategoriler</a><a href="hizmetler.html" class="footer-link">Hizmetler</a></div>
-        <div><h3 class="footer-title">İletişim</h3><p>📞 0 532 000 00 00</p></div>
+        <div>
+          <h3 class="footer-title">ASRA WEB AJANS</h3>
+          <p>Profesyonel hazır web siteleri ile işletmenizi dijital dünyaya taşıyın.</p>
+          <div style="margin-top: 1.5rem;">
+            <p>📞 0505 780 55 51</p>
+            <p>📧 bilgi@asrawebajans.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Hızlı Linkler</h3>
+          <a href="kategoriler.html" class="footer-link">Kategoriler</a>
+          <a href="hizmetler.html" class="footer-link">Hizmetler</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+          <a href="iletisim.html" class="footer-link">İletişim</a>
+          <a href="sepet.html" class="footer-link">Sepet</a>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Kategoriler</h3>
+          <a href="kategoriler.html?cat=nakliyat" class="footer-link">Nakliyat</a>
+          <a href="kategoriler.html?cat=hukuk" class="footer-link">Hukuk</a>
+          <a href="kategoriler.html?cat=beyaz-esya" class="footer-link">Beyaz Eşya</a>
+          <a href="kategoriler.html?cat=saglik" class="footer-link">Sağlık</a>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Hizmetler</h3>
+          <a href="seo.html" class="footer-link">SEO</a>
+          <a href="ads.html" class="footer-link">Google Ads</a>
+          <a href="sosyal-medya.html" class="footer-link">Sosyal Medya</a>
+          <a href="satin-al.html" class="footer-link">Satın Al</a>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2024 HazırSite.</p></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 ASRA WEB AJANS. Tüm hakları saklıdır.</p>
+      </div>
     </div>
   </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
