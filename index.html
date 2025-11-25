@@ -24,12 +24,12 @@
           <li class="nav-item">
             <a href="kategoriler.html" class="nav-link has-dropdown">Kategoriler</a>
             <div class="dropdown-menu">
-              <a href="kategoriler.html?kategori=nakliyat" class="dropdown-item">Nakliyat</a>
-              <a href="kategoriler.html?kategori=beyaz-esya" class="dropdown-item">Beyaz Eşya Servisi</a>
-              <a href="kategoriler.html?kategori=hukuk" class="dropdown-item">Avukat / Hukuk</a>
-              <a href="kategoriler.html?kategori=hafriyat" class="dropdown-item">Hafriyat</a>
-              <a href="kategoriler.html?kategori=temizlik" class="dropdown-item">Temizlik Şirketi</a>
-              <a href="kategoriler.html?kategori=saglik" class="dropdown-item">Hastane / Sağlık</a>
+              <a href="nakliyat.html" class="dropdown-item">Nakliyat</a>
+              <a href="beyaz-esya.html" class="dropdown-item">Beyaz Eşya Servisi</a>
+              <a href="hukuk.html" class="dropdown-item">Avukat / Hukuk</a>
+              <a href="hafriyat.html" class="dropdown-item">Hafriyat</a>
+              <a href="temizlik.html" class="dropdown-item">Temizlik Şirketi</a>
+              <a href="saglik.html" class="dropdown-item">Hastane / Sağlık</a>
             </div>
           </li>
 
@@ -67,43 +67,115 @@
   <!-- Hero Slider -->
   <section class="hero-slider">
     <div class="slider-wrapper">
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <div class="container">
-          <div class="slide-content">
-            <h1>Profesyonel Web Siteniz Hazır!</h1>
-            <p>Nakliyat, hukuk, beyaz eşya servisi ve daha fazlası için hazır site çözümleri. Hemen online satışa başlayın!</p>
+      <!-- Slide 1: Profesyonel Web Siteleri + Mockup -->
+      <div class="slide active" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;">
+          <div class="slide-content" style="animation: slideFromLeft 1s ease-out;">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem;">💻</div>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">Profesyonel Web Siteniz Hazır!</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Nakliyat, hukuk, beyaz eşya servisi ve daha fazlası için hazır site çözümleri. Mobil uyumlu, SEO dostu ve hızlı!</p>
             <div class="slide-actions">
-              <a href="kategoriler.html" class="btn btn-secondary btn-lg">Kategorileri İncele</a>
-              <a href="satin-al.html" class="btn btn-outline btn-lg">Hemen Satın Al</a>
+              <a href="kategoriler.html" class="btn btn-secondary btn-lg">📦 Kategorileri İncele</a>
+              <a href="satin-al.html" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.2); border-color: white;">Hemen Satın Al</a>
+            </div>
+          </div>
+          <div class="mockup-container" style="animation: slideFromRight 1.2s ease-out;">
+            <div class="mockup-desktop" style="background: #f8f9fa; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <div style="font-size: 4rem; margin-bottom: 1rem;">🌐</div>
+              <div style="font-weight: 700; color: #1e40af; font-size: 1.5rem;">Hazır Web Site</div>
+              <div style="color: #6b7280; margin-top: 0.5rem;">Mobil Uyumlu & Hızlı</div>
+            </div>
+            <div class="mockup-phone" style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+              <div style="font-size: 2.5rem;">📱</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="slide">
-        <div class="container">
-          <div class="slide-content">
-            <h1>2999 TL'den Başlayan Fiyatlar!</h1>
-            <p>Domain, hosting ve SSL dahil! WhatsApp ile hemen sipariş verin, 24 saat içinde teslim alalın.</p>
+      <!-- Slide 2: Sosyal Medya & Dijital Pazarlama -->
+      <div class="slide" style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;">
+          <div class="slide-content" style="animation: slideFromLeft 1s ease-out;">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem;">📱</div>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">Sosyal Medya ve Dijital Pazarlama</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Instagram, Facebook, Google Ads ile müşterilerinize ulaşın. Profesyonel sosyal medya yönetimi ve reklam kampanyaları!</p>
             <div class="slide-actions">
-              <a href="satin-al.html" class="btn btn-secondary btn-lg">Fiyat Hesapla</a>
-              <a href="#one-cikanlar" class="btn btn-outline btn-lg">Öne Çıkanlar</a>
+              <a href="hizmetler.html#sosyal-medya" class="btn btn-secondary btn-lg">📊 Sosyal Medya</a>
+              <a href="hizmetler.html#ads" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.2); border-color: white;">Google Ads</a>
+            </div>
+          </div>
+          <div style="animation: slideFromRight 1.2s ease-out; display: flex; flex-direction: column; gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+              <div style="background: white; padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">📸</div>
+                <div style="font-weight: 700; color: #7c3aed;">Instagram</div>
+                <div style="color: #6b7280; font-size: 0.875rem;">Yönetim</div>
+              </div>
+              <div style="background: white; padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">👍</div>
+                <div style="font-weight: 700; color: #7c3aed;">Facebook</div>
+                <div style="color: #6b7280; font-size: 0.875rem;">Reklamlar</div>
+              </div>
+              <div style="background: white; padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎯</div>
+                <div style="font-weight: 700; color: #7c3aed;">Google Ads</div>
+                <div style="color: #6b7280; font-size: 0.875rem;">Kampanyalar</div>
+              </div>
+              <div style="background: white; padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔍</div>
+                <div style="font-weight: 700; color: #7c3aed;">SEO</div>
+                <div style="color: #6b7280; font-size: 0.875rem;">Optimizasyon</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 3 -->
-      <div class="slide">
-        <div class="container">
-          <div class="slide-content">
-            <h1>SEO ve Google Ads Hizmetlerimiz</h1>
-            <p>Web siteniz ile birlikte dijital pazarlama hizmetlerimizden de faydalanın. Google'da üst sıralarda görünün!</p>
+      <!-- Slide 3: Uygun Fiyatlar -->
+      <div class="slide" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div class="slide-content" style="animation: slideFromLeft 1s ease-out;">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem;">💰</div>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">2.999 TL'den Başlayan Fiyatlar!</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Domain, hosting ve SSL dahil! WhatsApp ile hemen sipariş verin, 24-48 saat içinde teslim alın.</p>
             <div class="slide-actions">
-              <a href="hizmetler.html" class="btn btn-secondary btn-lg">Hizmetleri Gör</a>
-              <a href="iletisim.html" class="btn btn-outline btn-lg">Teklif Al</a>
+              <a href="satin-al.html" class="btn btn-primary btn-lg" style="background: white; color: #f59e0b;">💳 Fiyat Hesapla</a>
+              <a href="#one-cikanlar" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.2); border-color: white;">Öne Çıkanlar</a>
+            </div>
+          </div>
+          <div style="animation: slideFromRight 1.2s ease-out;">
+            <div style="background: white; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+              <h3 style="color: #f59e0b; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Paket İçeriği</h3>
+              <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="background: #fef3c7; width: 50px; height: 50px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🌐</div>
+                  <div>
+                    <div style="font-weight: 700; color: #1f2937;">Domain (.com.tr)</div>
+                    <div style="color: #6b7280; font-size: 0.875rem;">1 Yıl Ücretsiz</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="background: #fef3c7; width: 50px; height: 50px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💾</div>
+                  <div>
+                    <div style="font-weight: 700; color: #1f2937;">Hosting</div>
+                    <div style="color: #6b7280; font-size: 0.875rem;">1 Yıl Ücretsiz</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="background: #fef3c7; width: 50px; height: 50px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🔒</div>
+                  <div>
+                    <div style="font-weight: 700; color: #1f2937;">SSL Sertifikası</div>
+                    <div style="color: #6b7280; font-size: 0.875rem;">Güvenli Bağlantı</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="background: #fef3c7; width: 50px; height: 50px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📱</div>
+                  <div>
+                    <div style="font-weight: 700; color: #1f2937;">Mobil Uyumlu</div>
+                    <div style="color: #6b7280; font-size: 0.875rem;">Responsive Tasarım</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -120,6 +192,40 @@
     <button class="slider-arrow slider-arrow-left">‹</button>
     <button class="slider-arrow slider-arrow-right">›</button>
   </section>
+
+  <style>
+    @keyframes slideFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Responsive için */
+    @media (max-width: 768px) {
+      .hero-slider .container[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+      .mockup-container, .hero-slider [style*="slideFromRight"] {
+        display: none !important;
+      }
+    }
+  </style>
 
   <!-- Domain Sorgulama -->
   <section class="section" style="background: var(--white);">
@@ -179,7 +285,7 @@
       </div>
 
       <div class="categories-grid">
-        <a href="kategoriler.html?cat=nakliyat" class="category-card">
+        <a href="nakliyat.html" class="category-card">
           <div class="category-image">🚚</div>
           <div class="category-content">
             <h3 class="category-title">Nakliyat & Lojistik</h3>
@@ -187,7 +293,7 @@
           </div>
         </a>
 
-        <a href="kategoriler.html?cat=beyaz-esya" class="category-card">
+        <a href="beyaz-esya.html" class="category-card">
           <div class="category-image">🔧</div>
           <div class="category-content">
             <h3 class="category-title">Beyaz Eşya Servisi</h3>
@@ -195,7 +301,7 @@
           </div>
         </a>
 
-        <a href="kategoriler.html?cat=hukuk" class="category-card">
+        <a href="hukuk.html" class="category-card">
           <div class="category-image">⚖️</div>
           <div class="category-content">
             <h3 class="category-title">Hukuk & Avukatlık</h3>
@@ -203,7 +309,7 @@
           </div>
         </a>
 
-        <a href="kategoriler.html?cat=hafriyat" class="category-card">
+        <a href="hafriyat.html" class="category-card">
           <div class="category-image">🏗️</div>
           <div class="category-content">
             <h3 class="category-title">Hafriyat & İnşaat</h3>
@@ -211,7 +317,7 @@
           </div>
         </a>
 
-        <a href="kategoriler.html?cat=saglik" class="category-card">
+        <a href="saglik.html" class="category-card">
           <div class="category-image">🏥</div>
           <div class="category-content">
             <h3 class="category-title">Sağlık & Klinik</h3>
@@ -219,10 +325,10 @@
           </div>
         </a>
 
-        <a href="kategoriler.html?cat=restoran" class="category-card">
-          <div class="category-image">🍕</div>
+        <a href="temizlik.html" class="category-card">
+          <div class="category-image">🧹</div>
           <div class="category-content">
-            <h3 class="category-title">Restoran & Cafe</h3>
+            <h3 class="category-title">Temizlik Şirketi</h3>
             <p class="category-count">14 hazır site</p>
           </div>
         </a>
@@ -552,10 +658,10 @@
 
         <div>
           <h3 class="footer-title">Kategoriler</h3>
-          <a href="kategoriler.html?cat=nakliyat" class="footer-link">Nakliyat</a>
-          <a href="kategoriler.html?cat=hukuk" class="footer-link">Hukuk</a>
-          <a href="kategoriler.html?cat=beyaz-esya" class="footer-link">Beyaz Eşya</a>
-          <a href="kategoriler.html?cat=saglik" class="footer-link">Sağlık</a>
+          <a href="nakliyat.html" class="footer-link">Nakliyat</a>
+          <a href="hukuk.html" class="footer-link">Hukuk</a>
+          <a href="beyaz-esya.html" class="footer-link">Beyaz Eşya</a>
+          <a href="saglik.html" class="footer-link">Sağlık</a>
         </div>
 
         <div>
