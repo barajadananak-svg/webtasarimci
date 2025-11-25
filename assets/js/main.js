@@ -772,6 +772,75 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ========== Ana Sayfa Domain Sorgulama ==========
+  const domainSearchForm = document.getElementById('domainSearchForm');
+  if (domainSearchForm) {
+    domainSearchForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const domainInput = document.getElementById('domainInput');
+      const resultDiv = document.getElementById('domainResult');
+
+      if (!domainInput || !resultDiv) return;
+
+      let domainName = domainInput.value.trim().toLowerCase();
+
+      if (!domainName) {
+        alert('Lütfen bir domain adı girin!');
+        return;
+      }
+
+      // .com, .com.tr gibi uzantıları kaldır
+      domainName = domainName.replace(/\.(com|net|org|info|com\.tr|net\.tr|org\.tr)$/gi, '');
+
+      // Show checking status
+      resultDiv.className = 'domain-result checking';
+      resultDiv.textContent = '🔍 Domain kontrol ediliyor...';
+
+      try {
+        // Simulate API call (Replace with real API)
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        // Random result for demo (Replace with real API response)
+        const isAvailable = Math.random() > 0.5;
+
+        if (isAvailable) {
+          resultDiv.className = 'domain-result available';
+          resultDiv.innerHTML = `
+            <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+              ✅ Harika! Domain müsait!
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <strong>${domainName}.com.tr</strong> kullanıma hazır
+            </div>
+            <a href="satin-al.html?domain=${domainName}.com.tr" class="btn btn-primary btn-sm">
+              Bu Domain ile Devam Et
+            </a>
+          `;
+        } else {
+          resultDiv.className = 'domain-result unavailable';
+          resultDiv.innerHTML = `
+            <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+              ❌ Domain kullanımda
+            </div>
+            <div style="margin-bottom: 0.5rem;">
+              <strong>${domainName}.com.tr</strong> maalesef alınmış
+            </div>
+            <div style="font-size: 0.875rem; margin-top: 1rem;">
+              <strong>Alternatif öneriler:</strong><br>
+              • ${domainName}web.com.tr<br>
+              • ${domainName}ajans.com.tr<br>
+              • ${domainName}.com
+            </div>
+          `;
+        }
+      } catch (error) {
+        resultDiv.className = 'domain-result unavailable';
+        resultDiv.textContent = '⚠️ Bir hata oluştu. Lütfen tekrar deneyin.';
+      }
+    });
+  }
+
 });
 
 // ========== Utility Functions ==========

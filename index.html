@@ -121,6 +121,55 @@
     <button class="slider-arrow slider-arrow-right">›</button>
   </section>
 
+  <!-- Domain Sorgulama -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Domain Adınızı Sorgulayın</h2>
+        <p class="text-muted">İstediğiniz domain adının müsait olup olmadığını hemen öğrenin</p>
+      </div>
+
+      <div class="domain-search-box" style="max-width: 800px; margin: 0 auto;">
+        <form class="domain-search-form" id="domainSearchForm">
+          <input
+            type="text"
+            class="domain-search-input"
+            id="domainInput"
+            placeholder="örnek: firmaadi.com.tr veya firmaadi"
+            required
+          />
+          <button type="submit" class="btn btn-primary btn-lg">
+            🔍 Sorgula
+          </button>
+        </form>
+
+        <div id="domainResult" class="domain-result"></div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+          <span style="background: var(--gray-100); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem;">
+            .com.tr
+          </span>
+          <span style="background: var(--gray-100); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem;">
+            .com
+          </span>
+          <span style="background: var(--gray-100); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem;">
+            .net
+          </span>
+          <span style="background: var(--gray-100); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem;">
+            .org
+          </span>
+          <span style="background: var(--gray-100); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem;">
+            .info
+          </span>
+        </div>
+
+        <p style="text-align: center; margin-top: 1.5rem; color: var(--gray-600); font-size: 0.875rem;">
+          💡 Domain ücreti web sitesi paketinize dahildir
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Kategoriler -->
   <section class="section">
     <div class="container">
@@ -181,6 +230,111 @@
 
       <div class="text-center mt-5">
         <a href="kategoriler.html" class="btn btn-primary btn-lg">Tüm Kategoriler</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Site Paketleri -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Web Site Paketlerimiz</h2>
+        <p class="text-muted">İhtiyacınıza uygun paketi seçin, hemen online olun</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Temel Paket -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Temel Paket</h3>
+            <div class="pricing-price">
+              2.999<small>₺</small>
+            </div>
+            <p class="pricing-period">Tek seferlik ödeme</p>
+          </div>
+
+          <div class="pricing-features">
+            <div class="pricing-feature">1 Yıl Domain (.com.tr)</div>
+            <div class="pricing-feature">1 Yıl Hosting (5 GB)</div>
+            <div class="pricing-feature">SSL Sertifikası</div>
+            <div class="pricing-feature">5 Sayfa İçerik</div>
+            <div class="pricing-feature">Mobil Uyumlu Tasarım</div>
+            <div class="pricing-feature">İletişim Formu</div>
+            <div class="pricing-feature">Google Maps Entegrasyonu</div>
+            <div class="pricing-feature">Temel SEO Optimizasyonu</div>
+          </div>
+
+          <a href="satin-al.html?paket=temel" class="btn btn-outline btn-block btn-lg">
+            Satın Al
+          </a>
+        </div>
+
+        <!-- Profesyonel Paket -->
+        <div class="pricing-card featured">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Profesyonel Paket</h3>
+            <div class="pricing-price">
+              4.999<small>₺</small>
+            </div>
+            <p class="pricing-period">Tek seferlik ödeme</p>
+          </div>
+
+          <div class="pricing-features">
+            <div class="pricing-feature">1 Yıl Domain (.com / .com.tr)</div>
+            <div class="pricing-feature">1 Yıl Hosting (10 GB)</div>
+            <div class="pricing-feature">SSL Sertifikası</div>
+            <div class="pricing-feature">10 Sayfa İçerik</div>
+            <div class="pricing-feature">Mobil Uyumlu Tasarım</div>
+            <div class="pricing-feature">İletişim Formu</div>
+            <div class="pricing-feature">WhatsApp Butonu</div>
+            <div class="pricing-feature">Blog Modülü</div>
+            <div class="pricing-feature">Admin Paneli</div>
+            <div class="pricing-feature">Gelişmiş SEO Optimizasyonu</div>
+            <div class="pricing-feature">E-posta Hesapları (5 adet)</div>
+          </div>
+
+          <a href="satin-al.html?paket=profesyonel" class="btn btn-primary btn-block btn-lg">
+            Satın Al
+          </a>
+        </div>
+
+        <!-- Premium Paket -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Premium Paket</h3>
+            <div class="pricing-price">
+              7.999<small>₺</small>
+            </div>
+            <p class="pricing-period">Tek seferlik ödeme</p>
+          </div>
+
+          <div class="pricing-features">
+            <div class="pricing-feature">1 Yıl Domain (tüm uzantılar)</div>
+            <div class="pricing-feature">1 Yıl Hosting (20 GB)</div>
+            <div class="pricing-feature">SSL Sertifikası</div>
+            <div class="pricing-feature">Sınırsız Sayfa İçerik</div>
+            <div class="pricing-feature">Özel Tasarım</div>
+            <div class="pricing-feature">Gelişmiş Admin Paneli</div>
+            <div class="pricing-feature">E-Ticaret Modülü</div>
+            <div class="pricing-feature">Online Randevu Sistemi</div>
+            <div class="pricing-feature">Blog ve Haber Sistemi</div>
+            <div class="pricing-feature">Sosyal Medya Entegrasyonu</div>
+            <div class="pricing-feature">E-posta Hesapları (Sınırsız)</div>
+            <div class="pricing-feature">1 Yıl Ücretsiz Destek</div>
+            <div class="pricing-feature">Profesyonel SEO</div>
+          </div>
+
+          <a href="satin-al.html?paket=premium" class="btn btn-secondary btn-block btn-lg">
+            Satın Al
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p style="color: var(--gray-600); margin-bottom: 1rem;">
+          🎁 Tüm paketlerde 1 yıl domain ve hosting ücretsiz!
+        </p>
+        <a href="satin-al.html" class="btn btn-whatsapp btn-lg">💬 WhatsApp ile Teklif Al</a>
       </div>
     </div>
   </section>
@@ -282,6 +436,94 @@
       <div class="text-center mt-5">
         <a href="kategoriler.html" class="btn btn-secondary btn-lg">Tüm Ürünleri Gör</a>
         <a href="satin-al.html" class="btn btn-whatsapp btn-lg">💬 WhatsApp ile Sipariş Ver</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Öne Çıkanlar -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Blog Yazılarımız</h2>
+        <p class="text-muted">Web siteniz için faydalı ipuçları ve güncel haberler</p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Blog 1 -->
+        <article class="blog-card">
+          <div class="blog-image" style="background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);">
+            📱
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">SEO</span>
+              <span class="blog-date">📅 20 Kasım 2024</span>
+            </div>
+            <h3 class="blog-title">2024 Yılında SEO Nasıl Yapılır?</h3>
+            <p class="blog-excerpt">
+              Google algoritmasının son güncellemeleri ışığında web sitenizi nasıl optimize edebileceğinizi öğrenin.
+              Modern SEO teknikleri ve stratejileri hakkında detaylı bilgiler.
+            </p>
+            <div class="blog-footer">
+              <span class="blog-author">👤 Ahmet Yılmaz</span>
+              <a href="blog-detay.html?id=1" class="blog-read-more">
+                Devamını Oku →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="blog-card">
+          <div class="blog-image" style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
+            🎨
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Tasarım</span>
+              <span class="blog-date">📅 18 Kasım 2024</span>
+            </div>
+            <h3 class="blog-title">Web Tasarımda 2024 Trendleri</h3>
+            <p class="blog-excerpt">
+              Modern web tasarımının en popüler trendlerini keşfedin. Kullanıcı deneyimini artıran
+              tasarım prensipleri ve güncel yaklaşımlar.
+            </p>
+            <div class="blog-footer">
+              <span class="blog-author">👤 Ayşe Demir</span>
+              <a href="blog-detay.html?id=2" class="blog-read-more">
+                Devamını Oku →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="blog-card">
+          <div class="blog-image" style="background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);">
+            💼
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Dijital Pazarlama</span>
+              <span class="blog-date">📅 15 Kasım 2024</span>
+            </div>
+            <h3 class="blog-title">Google Ads ile Müşteri Kazanma</h3>
+            <p class="blog-excerpt">
+              Google Ads kampanyalarınızı nasıl optimize edip daha fazla müşteriye ulaşabileceğinizi öğrenin.
+              Bütçe yönetimi ve hedefleme stratejileri.
+            </p>
+            <div class="blog-footer">
+              <span class="blog-author">👤 Mehmet Kaya</span>
+              <a href="blog-detay.html?id=3" class="blog-read-more">
+                Devamını Oku →
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="blog.html" class="btn btn-primary btn-lg">Tüm Blog Yazıları</a>
       </div>
     </div>
   </section>
